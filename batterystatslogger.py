@@ -2,10 +2,10 @@
 from batterystats import Battery
 from sched import scheduler
 from time import time, sleep
-from os import mkdir, path, environ as env
+from os import listdir as ls, mkdir, path, environ as env
 
 _BAT        = 0
-_HOME       = "/home/shreyas/"
+_HOME       = "/home/"+ls("/home")[0]
 _LOG_FOLDER = _HOME + '/.batterylogs'
 _LOG_FILE   = _LOG_FOLDER + f'/log_{_BAT}.csv'
 
