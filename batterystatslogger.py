@@ -17,12 +17,24 @@ if not path.exists(_LOG_FOLDER):
     print("creating folder",_LOG_FOLDER)
     mkdir(_LOG_FOLDER)
 
+if not path.exists(_LOG_FILE):
+    print("creating file",_LOG_FOLDER)
+    with open(_LOG_FILE, 'a') as log_file:
+        log_file.write("date,time,status,capacity,capacity_full,capacity_full_design")
+
 def log():
-    data = bat.main_stats
-    data = ','.join([str(data[key]) for key in data])
+    data = [
+        bat.date,
+        bat.time,
+        bat.status,
+        bat.capacity,
+        bat.capacity_full,
+        bat.capacity_full_design,
+    ]
+    data = ','.join([str(item) for item in data])
 
     with open(_LOG_FILE, 'a') as log_file:
-        log_file.write(data+'\n')
+        log_file.write('\n'+data)
     
     print(data)
 
