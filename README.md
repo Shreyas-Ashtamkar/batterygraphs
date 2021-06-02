@@ -12,3 +12,6 @@ sudo systemctl daemon-reload
 sudo systemctl start batterylogger.service
 ```
 4. All data will be collected to `/home/<username>/.batterylogger/log_0.csv`
+
+### Screenshot of working
+![Screenshot](screenshot.png)

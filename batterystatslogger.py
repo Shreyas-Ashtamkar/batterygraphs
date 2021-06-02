@@ -19,7 +19,7 @@ if not path.exists(_LOG_FOLDER):
 if not path.exists(_LOG_FILE):
     print("creating file",_LOG_FOLDER)
     with open(_LOG_FILE, 'a') as log_file:
-        log_file.write("date,time,status,capacity,capacity_full,capacity_full_design")
+        log_file.write("date,time,status,capacity,charge_full,charge_full_design,health")
 
 def log():
     data = [
@@ -27,8 +27,9 @@ def log():
         bat.time,
         bat.status,
         bat.capacity,
-        bat.capacity_full,
-        bat.capacity_full_design,
+        bat.charge_full,
+        bat.charge_full_design,
+        bat.health,
     ]
     data = ','.join([str(item) for item in data])
 
@@ -38,5 +39,5 @@ def log():
     print(data)
 
 while True:
-    bat_logger.enter(300, 1, log)
+    bat_logger.enter(60, 1, log)
     bat_logger.run()
