@@ -1,0 +1,3 @@
+[submodule "batterystats"]
+	path = batterystats
+	url = https://github.com/Shreyas-Ashtamkar/batterystats.git
