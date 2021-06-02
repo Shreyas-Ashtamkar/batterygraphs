@@ -9,7 +9,6 @@ _HOME       = "/home/"+ls("/home")[0]
 _LOG_FOLDER = _HOME + '/.batterylogs'
 _LOG_FILE   = _LOG_FOLDER + f'/log_{_BAT}.csv'
 
-
 bat = Battery()
 bat_logger = scheduler(time, sleep)
 
