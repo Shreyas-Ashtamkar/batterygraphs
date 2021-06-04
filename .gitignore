@@ -3,6 +3,7 @@
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
+batterylogger.service
 __pycache__/
 *.py[cod]
 *$py.class
