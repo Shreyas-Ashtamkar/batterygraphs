@@ -165,3 +165,4 @@ Thumbs.db
 .ionide
 .github
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
+batterylogger.service
