@@ -9,7 +9,8 @@ service_file = open("batterylogger.service", 'w')
 
 NAME = "Battery Logger Service"
 PYTHON_EXEC = sys.executable
-THIS_FOLDER = os.path.dirname(__file__)
+THIS_FOLDER = PYTHON_EXEC.split('venv')[0][:-1] if 'venv' in PYTHON_EXEC else os.path.dirname(__file__)
+print(__file__)
 
 service = \
 f'''[Unit]
@@ -19,7 +20,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart={PYTHON_EXEC} {THIS_FOLDER}/batterystatslogger.py
+ExecStart={PYTHON_EXEC} {THIS_FOLDER if THIS_FOLDER else '.' }/batterystatslogger.py
 # StandardInput=tty-force
 
 [Install]
