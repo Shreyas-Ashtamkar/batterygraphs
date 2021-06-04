@@ -5,7 +5,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /home/shreyas/myscripts/battery-graph/batterystatslogger.py
+ExecStart=/usr/bin/python3 /home/shreyas/myscripts/batterygraphs/batterystatslogger.py
 # StandardInput=tty-force
 
 [Install]
