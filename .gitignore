@@ -3,7 +3,6 @@
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
-batterylogger.service
 __pycache__/
 *.py[cod]
 *$py.class
@@ -166,3 +165,4 @@ Thumbs.db
 .ionide
 .github
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
+batterylogger.service
