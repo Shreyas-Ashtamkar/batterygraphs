@@ -20,6 +20,7 @@ if not path.exists(_LOG_FILE):
     print("creating file",_LOG_FOLDER)
     with open(_LOG_FILE, 'a') as log_file:
         log_file.write("timestamp,status,capacity,health")
+        log_file.flush()
 
 def log():
     data = [
@@ -32,6 +33,7 @@ def log():
 
     with open(_LOG_FILE, 'a') as log_file:
         log_file.write('\n'+data)
+        log_file.flush()
     
     print(data)
 
